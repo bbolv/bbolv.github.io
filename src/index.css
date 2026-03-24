@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Radiant Elegant Dark Gray Palette */
-  --bg-primary: #0A0A0B;
-  --bg-secondary: #121316;
-  --bg-glass: rgba(18, 19, 22, 0.65);
-  --border-color: rgba(255, 255, 255, 0.06);
-  --border-hover: rgba(255, 255, 255, 0.15);
+  /* Elegant Light Gray Palette */
+  --bg-primary: #E5E5E5; /* Fondo gris elegante */
+  --bg-secondary: #F4F4F5; /* Fondo secundario más claro */
+  --bg-glass: rgba(255, 255, 255, 0.45);
+  --border-color: rgba(0, 0, 0, 0.08); /* Bordes sutiles oscuros */
+  --border-hover: rgba(0, 0, 0, 0.2);
   
-  --text-primary: #F4F4F5;
-  --text-secondary: #A1A1AA;
+  --text-primary: #111111; /* Texto negro/gris muy oscuro */
+  --text-secondary: #555555; /* Texto gris intermedio elegante */
   
-  --accent-glow: #3B82F6;
-  --accent-color: #E4E4E7;
+  --accent-glow: #000000;
+  --accent-color: #333333;
   
   --font-main: 'Inter', system-ui, -apple-system, sans-serif;
   
@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: var(--transition-smooth);
 }
 .glass:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.7);
   border-color: var(--border-hover);
 }
 
@@ -122,7 +122,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translate(-50%, -50%);
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(255,255,255,0.02) 0%, rgba(10,10,11,0) 60%);
+  background: radial-gradient(circle, rgba(0,0,0,0.03) 0%, rgba(229,229,229,0) 60%);
   z-index: -1;
   pointer-events: none;
   filter: blur(60px);

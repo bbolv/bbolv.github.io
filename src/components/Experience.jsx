@@ -3,18 +3,18 @@ import React from 'react';
 const Experience = () => {
   const experiences = [
     {
-      role: 'Ingeniero de Software Senior',
-      company: 'Tech Innovations',
-      period: '2023 - Presente',
-      description: 'Liderando la arquitectura y desarrollo de interfaces de usuario para sistemas de gran escala. Mejoramos el rendimiento del renderizado en un 40% aplicando buenas prácticas web.',
-      tech: ['React', 'TypeScript', 'Node.js']
+      role: 'Manager de Desarrollo de Software',
+      company: 'iTire',
+      period: '2024 - Presente',
+      description: 'Liderando la arquitectura y desarrollo de interfaces de usuario para sistemas de gran escala. Mejoramos el rendimiento del renderizado en un 40% aplicando buenas prácticas.',
+      tech: ['Angular', 'TypeScript', 'NestJS', 'MongoDB', 'Redis']
     },
     {
       role: 'Desarrollador Full Stack',
-      company: 'StartUp Digital',
+      company: 'Xmars',
       period: '2020 - 2023',
-      description: 'Creación de plataformas escalables para e-commerce. Integración de pagos, autenticación robusta y diseño orientado a componentes modernos.',
-      tech: ['JavaScript', 'Next.js', 'PostgreSQL']
+      description: 'Gestion de chat empresarial',
+      tech: ['JavaScript', 'React', 'Node.js', 'MongoDB']
     }
   ];
 

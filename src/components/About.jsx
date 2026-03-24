@@ -7,10 +7,10 @@ const About = () => {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'start' }}>
         <div>
           <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '1.5rem', lineHeight: 1.8 }}>
-            ¡Hola! Mi nombre es Brandon y disfruto crear cosas que viven en internet. Mi interés en el desarrollo web surgió al intentar crear interfaces agradables que mejoraran la interacción humana con la tecnología.
+            Soy Ingeniero de Software con más de 3 años de experiencia construyendo backend, aplicaciones móviles y sistemas fullstack escalables. Me especializo en TypeScript, Python, NestJS, React, y Flutter, y Redis para procesamiento de datos considerando procesos de alto rendimiento, entregando aplicaciones listas para producción con arquitectura limpia y mejores prácticas de desarrollo de software.
           </p>
           <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '1.5rem', lineHeight: 1.8 }}>
-            Hoy en día, he tenido el privilegio de trabajar y aprender enfocándome en arquitectura frontend orientada a componentes, usando las tecnologías más modernas y rápidas del ecosistema de JavaScript.
+            Actualmente trabajo como Manager del equipo de Desarrollo de Software de iTire, en donde diseño arquitectura de software, dirijo el desarrollo de software y me encargo de la gestión de proyectos de software., así como también me encargo del despliegue del sistema en App Store, Google Play, Railway, Vercel.
           </p>
           <p style={{ color: 'var(--text-primary)', fontSize: '1.1rem', fontWeight: 500, marginBottom: '1rem', marginTop: '2rem' }}>
             Tecnologías con las que he trabajado recientemente:
@@ -28,12 +28,12 @@ const About = () => {
             </ul>
           </div>
         </div>
-        
+
         {/* Contenedor de Imagen de Perfil */}
         <div style={{ position: 'relative', width: '100%', maxWidth: '350px', margin: '0 auto', marginTop: '2rem' }}>
           <div className="glass-card" style={{ width: '100%', aspectRatio: '1/1', borderRadius: '16px', overflow: 'hidden', position: 'relative', zIndex: 10 }}>
-            <div style={{ width: '100%', height: '100%', background: 'linear-gradient(135deg, rgba(59,130,246,0.15) 0%, rgba(18,19,22,1) 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <span style={{ fontSize: '5rem', color: 'rgba(255,255,255,0.05)', fontWeight: 700 }}>BB</span>
+            <div style={{ width: '100%', height: '100%', background: 'linear-gradient(135deg, rgba(0,0,0,0.05) 0%, rgba(244,244,245,1) 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <span style={{ fontSize: '5rem', color: 'rgba(0,0,0,0.05)', fontWeight: 700 }}>BB</span>
             </div>
           </div>
           <div style={{ position: 'absolute', top: '20px', left: '20px', right: '-20px', bottom: '-20px', border: '2px solid var(--accent-glow)', borderRadius: '16px', zIndex: 1, opacity: 0.5 }}></div>

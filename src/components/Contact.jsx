@@ -10,7 +10,7 @@ const Contact = () => {
         Ponte en Contacto
       </h2>
       <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto 3.5rem auto', lineHeight: 1.7 }}>
-        Actualmente estoy abierto a nuevas oportunidades de ingeniería. Ya sea que tengas una pregunta relacionada a un proyecto, o simplemente quieras saludar, ¡intentaré responder lo más rápido posible!
+        ¿Quieres saludar? ¡intentaré responder lo más rápido posible!
       </p>
       <a href="mailto:tu-correo@ejemplo.com" className="glass" style={{ padding: '1.2rem 3rem', color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 500, fontSize: '1.1rem', display: 'inline-block' }}>
         Saludar
