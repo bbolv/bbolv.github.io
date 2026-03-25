@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section id="inicio" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: '80px' }} className="section animate-fade-in glow-effect">
+    <section id="inicio" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: '80px' }} className="section glow-effect">
       <div className="container" style={{ position: 'relative', zIndex: 10 }}>
         <div className="glass-panel" style={{ display: 'inline-block', maxWidth: '800px', padding: '3.5rem' }}>
           <p style={{ color: 'var(--text-secondary)', fontWeight: 600, letterSpacing: '0.15em', marginBottom: '1rem', textTransform: 'uppercase', fontSize: '0.85rem' }}>

@@ -63,6 +63,8 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 16px;
   transition: var(--transition-smooth);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.03);
+  transform: translateZ(0); /* Fuerza aceleración 3D para evitar glitch de carga en navegadores */
+  will-change: transform, backdrop-filter;
 }
 
 .glass-panel {
@@ -73,6 +75,8 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 24px;
   padding: 3rem;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05); /* Sombra tridimensional muy suave */
+  transform: translateZ(0); /* Evita el parpadeo de transparencia antes de procesar el filtro */
+  will-change: transform, backdrop-filter;
 }
 .glass-card:hover {
   transform: translateY(-4px);
