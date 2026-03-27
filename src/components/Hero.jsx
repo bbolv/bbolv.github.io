@@ -12,10 +12,10 @@ const Hero = () => {
             Brandon Bautista.
           </h1>
           <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', color: 'var(--text-secondary)', marginTop: '0.5rem', lineHeight: 1.2, fontWeight: 700, letterSpacing: '-0.02em' }}>
-            Software.
+            Tech Lead.
           </h2>
           <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(0.95rem, 2.5vw, 1.15rem)', marginTop: '2rem', lineHeight: 1.8 }}>
-            Soy <strong>Tech Lead</strong> e <strong>Ingeniero de Software</strong> experto en la creación de aplicaciones escalables (Móvil, Web y Backend). Fusiono principios de sistemas distribuidos y arquitectura de alto rendimiento para entregar productos robustos centrados en usuarios.
+            Soy <strong>Físico</strong> y <strong>Tech Lead</strong>, experto en la construcción de sistemas backend, móvil y fullstack escalables -desde arquitectura hasta producción.
           </p>
           <div style={{ marginTop: '3rem', display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
             <a href="#proyectos" className="glass" style={{ padding: '0.8rem 2.5rem', color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 500, display: 'inline-block', border: '1px solid var(--border-color)', borderRadius: '9999px', background: 'var(--bg-primary)' }}>

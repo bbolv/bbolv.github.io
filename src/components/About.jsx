@@ -8,20 +8,19 @@ const About = () => {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'start' }}>
         <div className="glass-panel">
           <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)', marginBottom: '1.2rem', lineHeight: 1.8 }}>
-            Soy <strong>Ingeniero de Software</strong> con 3+ años de experiencia construyendo aplicaciones móviles, backend y servicios fullstack altamente escalables. Mi enfoque abarca desde el diseño arquitectónico de sistemas distribuidos hasta su despliegue final en producción.
-          </p>
+            Soy <strong>Ingeniero de Software</strong> con +3 años de experiencia construyendo aplicaciones móviles, backend y servicios fullstack escalables.</p>
           <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)', marginBottom: '1.2rem', lineHeight: 1.8 }}>
-            Actualmente dirijo y coordino esfuerzos interfuncionales como <strong>Tech Lead</strong>, asegurando la calidad del código, automatizando despliegues (CI/CD) y liderando iniciativas técnicas para aplicaciones en iOS, Android y el ecosistema Web.
+            Actualmente como <strong>Tech Lead</strong> dirijo el equipo de Software de iTire. En este rol me involucro en todo el ciclo <strong>SDLC</strong>: lidero las decisiones técnicas para aplicaciones móviles (iOS, Android) y web, asegurando la calidad del código, diseñando la arquitectura y el sistema, y gestionando el proceso de despliegue y App Publishing. Del mismo modo trabajo de cerca con el equipo de hardware para diseñar nuevas integraciones. Además colaboro con el equipo de soporte para priorizar requisitos, y de la mano con diseño, traducirlos en nuevas funcionalidades.
           </p>
           <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)', marginBottom: '1.5rem', lineHeight: 1.8 }}>
             Tengo formación académica formal como <strong>Físico Teórico</strong> <em>(M.Sc. con Honores por la UNAM y B.Sc. por la UAEMor)</em>. Durante mi estancia en la academia me enfoqué en la Relatividad General, particularmente en física y astrofísica de agujeros negros.</p>
           <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)', marginBottom: '1.5rem', lineHeight: 1.8 }}>
             Disfruto mucho la literatura y el cine de ciencia ficción, particularmente la ópera espacial 🚀. Me hace feliz la música de los 80s, rock clásico y el jazz. Uno de mis pasatiempos favoritos es tocar la guitarra 🎸 y pasar tiempo con mis gatos 🐈.</p>
           <p style={{ color: 'var(--text-primary)', fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)', fontWeight: 500, marginBottom: '1.5rem', marginTop: '2.5rem' }}>
-            Tecnologías con las que he trabajado recientemente:
+            Tecnologías con las que he trabajado:
           </p>
           <div style={{ display: 'flex', gap: '0.8rem', flexWrap: 'wrap' }}>
-            {['TypeScript', 'Python', 'NestJS', 'Flutter', 'Redis', 'MongoDB', 'AWS'].map((tech, i) => (
+            {['TypeScript', 'Python', 'NestJS', 'Flutter', 'Redis', 'MongoDB', 'GraphQL', 'Socket.IO', 'AWS (S3)', 'AWS (EC2)', 'AWS (EKS/ECS)', 'Github Actions', 'Figma'].map((tech, i) => (
               <span key={i} style={{ color: 'var(--text-primary)', background: 'rgba(255, 255, 255, 0.8)', border: '1px solid var(--border-color)', padding: '0.4rem 1.2rem', borderRadius: '99px', fontSize: 'clamp(0.75rem, 2vw, 0.85rem)', fontWeight: 500 }}>
                 {tech}
               </span>
