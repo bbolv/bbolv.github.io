@@ -5,7 +5,7 @@ const Hero = () => {
     <section id="inicio" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: '80px' }} className="section glow-effect">
       <div className="container" style={{ position: 'relative', zIndex: 10 }}>
         <div className="glass-panel" style={{ display: 'inline-block', maxWidth: '800px', padding: '3.5rem' }}>
-          <p style={{ color: 'var(--text-secondary)', fontWeight: 600, letterSpacing: '0.15em', marginBottom: '1rem', textTransform: 'uppercase', fontSize: '0.85rem' }}>
+          <p style={{ color: 'var(--text-secondary)', fontWeight: 600, letterSpacing: '0.15em', marginBottom: '1rem', textTransform: 'uppercase', fontSize: 'clamp(0.75rem, 2vw, 0.85rem)' }}>
             Portafolio Profesional
           </p>
           <h1 className="section-title" style={{ margin: 0, fontSize: 'clamp(3rem, 8vw, 4.5rem)', lineHeight: 1.1, borderBottom: 'none' }}>
@@ -14,7 +14,7 @@ const Hero = () => {
           <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', color: 'var(--text-secondary)', marginTop: '0.5rem', lineHeight: 1.2, fontWeight: 700, letterSpacing: '-0.02em' }}>
             Software.
           </h2>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '1.15rem', marginTop: '2rem', lineHeight: 1.8 }}>
+          <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(0.95rem, 2.5vw, 1.15rem)', marginTop: '2rem', lineHeight: 1.8 }}>
             Soy <strong>Tech Lead</strong> e <strong>Ingeniero de Software</strong> experto en la creación de aplicaciones escalables (Móvil, Web y Backend). Fusiono principios de sistemas distribuidos y arquitectura de alto rendimiento para entregar productos robustos centrados en usuarios.
           </p>
           <div style={{ marginTop: '3rem', display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>

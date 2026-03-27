@@ -103,7 +103,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section {
-  padding: 8rem 0;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.experience-card {
+  padding: 2.5rem;
 }
 
 .section-title {
@@ -143,4 +148,58 @@ h1, h2, h3, h4, h5, h6 {
   z-index: -1;
   pointer-events: none;
   filter: blur(60px);
+}
+
+/* =========================================
+   Responsive Utilities
+   ========================================= */
+
+.mobile-menu-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.2rem;
+  }
+  .section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  .experience-card {
+    padding: 1.5rem;
+  }
+  .glass-panel {
+    padding: 1.5rem;
+  }
+  .glass-card {
+    padding: 1.5rem;
+  }
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+  .mobile-menu-btn {
+    display: block;
+    cursor: pointer;
+    color: var(--text-primary);
+  }
+  .nav-links {
+    display: none !important;
+  }
+  .nav-links.open {
+    display: flex !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 2rem;
+    gap: 1.5rem !important;
+    border-bottom: 1px solid var(--border-color);
+    align-items: center;
+  }
 }
