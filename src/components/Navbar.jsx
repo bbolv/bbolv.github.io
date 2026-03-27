@@ -22,10 +22,17 @@ const Navbar = () => {
       alignItems: 'center',
       zIndex: 100,
       transition: 'var(--transition-smooth)',
-      background: scrolled ? 'var(--bg-glass)' : 'transparent',
-      backdropFilter: scrolled ? 'blur(16px)' : 'none',
-      borderBottom: scrolled ? '1px solid var(--border-color)' : '1px solid transparent'
     }}>
+      <div style={{
+        position: 'absolute',
+        inset: 0,
+        background: (scrolled || isMobileMenuOpen) ? 'var(--bg-glass)' : 'transparent',
+        backdropFilter: (scrolled || isMobileMenuOpen) ? 'blur(16px)' : 'none',
+        WebkitBackdropFilter: (scrolled || isMobileMenuOpen) ? 'blur(16px)' : 'none',
+        borderBottom: (scrolled || isMobileMenuOpen) ? '1px solid var(--border-color)' : '1px solid transparent',
+        transition: 'var(--transition-smooth)',
+        zIndex: -1
+      }} />
       <div style={{ fontWeight: 700, fontSize: 'clamp(1rem, 2vw, 1.2rem)', letterSpacing: '-0.02em', color: 'var(--text-primary)', cursor: 'pointer' }}>
         bbolv.
       </div>

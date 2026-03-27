@@ -35,7 +35,7 @@ const Experience = () => {
             </p>
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               {exp.tech.map((tech, i) => (
-                <span key={i} style={{ color: 'var(--accent-glow)', background: 'rgba(59,130,246,0.1)', padding: '0.3rem 1rem', borderRadius: '99px', fontSize: 'clamp(0.7rem, 1.5vw, 0.8rem)', fontWeight: 500 }}>
+                <span key={i} style={{ color: 'var(--text-primary)', background: 'rgba(255, 255, 255, 0.8)', border: '1px solid var(--border-color)', padding: '0.3rem 1rem', borderRadius: '99px', fontSize: 'clamp(0.7rem, 1.5vw, 0.8rem)', fontWeight: 500 }}>
                   {tech}
                 </span>
               ))}
