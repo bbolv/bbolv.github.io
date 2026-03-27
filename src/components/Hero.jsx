@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="container" style={{ position: 'relative', zIndex: 10 }}>
         <div className="glass-panel" style={{ display: 'inline-block', maxWidth: '800px', padding: '3.5rem' }}>
           <p style={{ color: 'var(--text-secondary)', fontWeight: 600, letterSpacing: '0.15em', marginBottom: '1rem', textTransform: 'uppercase', fontSize: 'clamp(0.75rem, 2vw, 0.85rem)' }}>
-            Portafolio Profesional
+            Portafolio Personal
           </p>
           <h1 className="section-title" style={{ margin: 0, fontSize: 'clamp(3rem, 8vw, 4.5rem)', lineHeight: 1.1, borderBottom: 'none' }}>
             Brandon Bautista.

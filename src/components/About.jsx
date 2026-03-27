@@ -14,13 +14,14 @@ const About = () => {
             Actualmente dirijo y coordino esfuerzos interfuncionales como <strong>Tech Lead</strong>, asegurando la calidad del código, automatizando despliegues (CI/CD) y liderando iniciativas técnicas para aplicaciones en iOS, Android y el ecosistema Web.
           </p>
           <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)', marginBottom: '1.5rem', lineHeight: 1.8 }}>
-            Tengo formación académica formal como <strong>Físico Teórico</strong> <em>(M.Sc. con Honores por la UNAM y B.Sc. por la UAEMor)</em>. Esta fuerte base matemática me permite dominar algoritmos complejos, infraestructura de bajo nivel y diseñar arquitecturas de software lógicamente robustas para miles de usuarios.
-          </p>
+            Tengo formación académica formal como <strong>Físico Teórico</strong> <em>(M.Sc. con Honores por la UNAM y B.Sc. por la UAEMor)</em>. Durante mi estancia en la academia me enfoqué en la Relatividad General, particularmente en física y astrofísica de agujeros negros.</p>
+          <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)', marginBottom: '1.5rem', lineHeight: 1.8 }}>
+            Disfruto mucho la literatura y el cine de ciencia ficción, particularmente la ópera espacial 🚀. Me hace feliz la música de los 80s, rock clásico y el jazz. Uno de mis pasatiempos favoritos es tocar la guitarra 🎸 y pasar tiempo con mis gatos 🐈.</p>
           <p style={{ color: 'var(--text-primary)', fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)', fontWeight: 500, marginBottom: '1.5rem', marginTop: '2.5rem' }}>
             Tecnologías con las que he trabajado recientemente:
           </p>
           <div style={{ display: 'flex', gap: '0.8rem', flexWrap: 'wrap' }}>
-            {['TypeScript', 'Python', 'NestJS', 'Flutter', 'Redis', 'MongoDB'].map((tech, i) => (
+            {['TypeScript', 'Python', 'NestJS', 'Flutter', 'Redis', 'MongoDB', 'AWS'].map((tech, i) => (
               <span key={i} style={{ color: 'var(--text-primary)', background: 'rgba(255, 255, 255, 0.8)', border: '1px solid var(--border-color)', padding: '0.4rem 1.2rem', borderRadius: '99px', fontSize: 'clamp(0.75rem, 2vw, 0.85rem)', fontWeight: 500 }}>
                 {tech}
               </span>
@@ -30,7 +31,7 @@ const About = () => {
 
         {/* Contenedor de Imagen de Perfil */}
         <div style={{ position: 'relative', width: '100%', maxWidth: '350px', margin: '0 auto', marginTop: '2rem' }}>
-          <div className="glass-card" style={{ width: '100%', aspectRatio: '1/1', borderRadius: '9999px', overflow: 'hidden', position: 'relative', zIndex: 10 }}>
+          <div className="glass-card" style={{ width: '100%', padding: 0, aspectRatio: '1/1', borderRadius: '9999px', overflow: 'hidden', position: 'relative', zIndex: 10 }}>
             <div style={{ width: '100%', height: '100%', background: 'linear-gradient(135deg, rgba(0,0,0,0.05) 0%, rgba(244,244,245,1) 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <img src={meImg} alt="Brandon Bautista" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>

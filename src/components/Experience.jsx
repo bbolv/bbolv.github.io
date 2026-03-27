@@ -43,6 +43,28 @@ const Experience = () => {
           </div>
         ))}
       </div>
+
+      {/* Subsección de Publicaciones */}
+      <div style={{ maxWidth: '800px', margin: '5rem auto 0 auto' }}>
+        <h3 style={{ fontSize: 'clamp(1.5rem, 4vw, 2rem)', color: 'var(--text-primary)', marginBottom: '2rem', borderBottom: '1px solid var(--border-color)', paddingBottom: '1rem' }}>Investigación Científica</h3>
+        <div className="glass-panel" style={{ padding: '2.5rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', flexWrap: 'wrap', gap: '1rem', marginBottom: '1.5rem' }}>
+            <span style={{ color: 'var(--text-primary)', background: 'rgba(255, 255, 255, 0.8)', border: '1px solid var(--border-color)', padding: '0.4rem 1.2rem', borderRadius: '99px', fontSize: 'clamp(0.75rem, 2vw, 0.85rem)', fontWeight: 600 }}>
+              Física Teórica
+            </span>
+            <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(0.85rem, 2vw, 0.95rem)', fontFamily: 'monospace', margin: 0, padding: '0.4rem 0' }}>2023</p>
+          </div>
+          
+          <h4 style={{ fontSize: 'clamp(1.2rem, 3vw, 1.5rem)', color: 'var(--text-primary)', marginBottom: '1rem', lineHeight: 1.4 }}>Geodesic structure of a rotating regular black hole</h4>
+          <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)', lineHeight: 1.7, marginBottom: '2rem' }}>
+            Análisis matemático y astrofísico profundo sobre el movimiento de partículas (estructura geodésica) en el espacio-tiempo de un agujero negro regular en rotación. Publicado en Springer.
+          </p>
+          
+          <a href="https://link.springer.com/article/10.1007/s10714-023-03114-7" target="_blank" rel="noopener noreferrer" className="glass" style={{ padding: '0.8rem 2rem', color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 500, display: 'inline-flex', alignItems: 'center', gap: '0.5rem', borderRadius: '9999px', fontSize: 'clamp(0.9rem, 2.5vw, 1rem)' }}>
+            Leer Publicación <span style={{ transition: 'transform 0.2s', display: 'inline-block' }}>→</span>
+          </a>
+        </div>
+      </div>
     </section>
   );
 };
