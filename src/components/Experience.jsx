@@ -57,7 +57,7 @@ const Experience = () => {
 
           <h4 style={{ fontSize: 'clamp(1.2rem, 3vw, 1.5rem)', color: 'var(--text-primary)', marginBottom: '1rem', lineHeight: 1.4 }}>Geodesic structure of a rotating regular black hole</h4>
           <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)', lineHeight: 1.7, marginBottom: '2rem' }}>
-            Análisis matemático y astrofísico profundo sobre el movimiento de partículas (estructura geodésica) en el espacio-tiempo de un agujero negro regular en rotación. Publicado en Springer.
+            Investigación sobre trayectorias de partículas masivas en la vecindad de un agujero negro con materia exótica como fuente. Se graficó el movimiento y el comportamiento de propiedades físicas relevantes a través de soluciones numéricas a las ecuaciones de movimiento de partículas masivas considerando los tres marcos teóricos de la mecánica clásica, utilizando Mathematica y Python. Publicado en Springer.
           </p>
 
           <a href="https://link.springer.com/article/10.1007/s10714-023-03114-7" target="_blank" rel="noopener noreferrer" className="glass" style={{ padding: '0.8rem 2rem', color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 500, display: 'inline-flex', alignItems: 'center', gap: '0.5rem', borderRadius: '9999px', fontSize: 'clamp(0.9rem, 2.5vw, 1rem)' }}>
