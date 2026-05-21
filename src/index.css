@@ -204,3 +204,58 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
   }
 }
+
+/* =========================================
+   Blog-specific Styles & Animations
+   ========================================= */
+
+.blog-card-title-hover {
+  cursor: pointer;
+}
+
+.blog-card-title-hover:hover {
+  color: var(--accent-color) !important;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.read-link-arrow span, .read-arrow-animate {
+  display: inline-block;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Micro-animación para levantar las flechas en hover de las tarjetas */
+.glass-card:hover .read-link-arrow span,
+.glass-card:hover .read-arrow-animate {
+  transform: translateX(4px);
+}
+
+/* Scrollbar premium para bloques de código pre */
+pre::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+pre::-webkit-scrollbar-track {
+  background: #18181B;
+}
+
+pre::-webkit-scrollbar-thumb {
+  background: #3F3F46;
+  border-radius: 99px;
+}
+
+pre::-webkit-scrollbar-thumb:hover {
+  background: #52525B;
+}
+
+/* Ocultar barra de desplazamiento en controles horizontales móviles */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Navbar = () => {
+const Navbar = ({ currentHash = '#/', onNavigate }) => {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -9,6 +9,48 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const isActive = (hashPattern) => {
+    if (hashPattern === '#/blog') {
+      return currentHash.startsWith('#/blog');
+    }
+    if (hashPattern === '#/') {
+      return currentHash === '#/' || currentHash === '#/inicio' || currentHash === '' || currentHash === '#inicio';
+    }
+    return currentHash === hashPattern || currentHash === hashPattern.replace('#/', '#');
+  };
+
+  const getLinkStyle = (hashPattern, isButton = false) => {
+    const active = isActive(hashPattern);
+    
+    if (isButton) {
+      return {
+        padding: '0.5rem 1.2rem',
+        color: 'var(--text-primary)',
+        textDecoration: 'none',
+        fontSize: 'clamp(0.85rem, 2vw, 0.9rem)',
+        fontWeight: active ? 650 : 500,
+        border: active ? '1px solid var(--text-primary)' : '1px solid var(--border-color)',
+        borderRadius: '9999px',
+        background: active ? 'rgba(255, 255, 255, 0.9)' : 'var(--bg-glass)',
+        transition: 'var(--transition-smooth)'
+      };
+    }
+
+    return {
+      color: active ? 'var(--text-primary)' : 'var(--text-secondary)',
+      textDecoration: 'none',
+      fontSize: 'clamp(0.85rem, 2vw, 0.9rem)',
+      fontWeight: active ? 650 : 500,
+      transition: 'color 0.2s',
+      position: 'relative'
+    };
+  };
+
+  const handleLinkClick = (e, targetHash) => {
+    setIsMobileMenuOpen(false);
+    // Permitimos la propagación para que el hash de la ventana cambie
+  };
 
   return (
     <nav style={{
@@ -33,8 +75,11 @@ const Navbar = () => {
         transition: 'var(--transition-smooth)',
         zIndex: -1
       }} />
-      <div style={{ fontWeight: 700, fontSize: 'clamp(1rem, 2vw, 1.2rem)', letterSpacing: '-0.02em', color: 'var(--text-primary)', cursor: 'pointer' }}>
-        bbolv.
+      <div 
+        onClick={() => handleNavigate('#/')}
+        style={{ fontWeight: 700, fontSize: 'clamp(1rem, 2vw, 1.2rem)', letterSpacing: '-0.02em', color: 'var(--text-primary)', cursor: 'pointer' }}
+      >
+        bbol <span style={{ color: 'var(--text-secondary)' }} >v.</span>
       </div>
 
       <div className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
@@ -55,11 +100,50 @@ const Navbar = () => {
       </div>
 
       <div className={`nav-links ${isMobileMenuOpen ? 'open' : ''}`} style={{ display: 'flex', gap: '2.5rem', alignItems: 'center' }}>
-        <a href="#inicio" style={{ color: 'var(--text-primary)', textDecoration: 'none', fontSize: 'clamp(0.85rem, 2vw, 0.9rem)', fontWeight: 500, transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = 'var(--accent-glow)'} onMouseLeave={(e) => e.target.style.color = 'var(--text-primary)'}>Inicio</a>
-        <a href="#sobre-mi" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: 'clamp(0.85rem, 2vw, 0.9rem)', fontWeight: 500, transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = 'var(--text-primary)'} onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}>Sobre Mí</a>
-        <a href="#trayectoria" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: 'clamp(0.85rem, 2vw, 0.9rem)', fontWeight: 500, transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = 'var(--text-primary)'} onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}>Trayectoria</a>
-        <a href="#blog" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: 'clamp(0.85rem, 2vw, 0.9rem)', fontWeight: 500, transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = 'var(--text-primary)'} onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}>Blog</a>
-        <a href="#contacto" className="glass" style={{ padding: '0.5rem 1.2rem', color: 'var(--text-primary)', textDecoration: 'none', fontSize: 'clamp(0.85rem, 2vw, 0.9rem)', fontWeight: 500 }}>Contacto</a>
+        <a 
+          href="#/" 
+          onClick={(e) => handleLinkClick(e, '#/')}
+          style={getLinkStyle('#/')}
+          onMouseEnter={(e) => { if (!isActive('#/')) e.target.style.color = 'var(--text-primary)'; }}
+          onMouseLeave={(e) => { if (!isActive('#/')) e.target.style.color = 'var(--text-secondary)'; }}
+        >
+          Inicio
+        </a>
+        <a 
+          href="#/sobre-mi" 
+          onClick={(e) => handleLinkClick(e, '#/sobre-mi')}
+          style={getLinkStyle('#/sobre-mi')}
+          onMouseEnter={(e) => { if (!isActive('#/sobre-mi')) e.target.style.color = 'var(--text-primary)'; }}
+          onMouseLeave={(e) => { if (!isActive('#/sobre-mi')) e.target.style.color = 'var(--text-secondary)'; }}
+        >
+          Sobre Mí
+        </a>
+        <a 
+          href="#/trayectoria" 
+          onClick={(e) => handleLinkClick(e, '#/trayectoria')}
+          style={getLinkStyle('#/trayectoria')}
+          onMouseEnter={(e) => { if (!isActive('#/trayectoria')) e.target.style.color = 'var(--text-primary)'; }}
+          onMouseLeave={(e) => { if (!isActive('#/trayectoria')) e.target.style.color = 'var(--text-secondary)'; }}
+        >
+          Trayectoria
+        </a>
+        <a 
+          href="#/blog" 
+          onClick={(e) => handleLinkClick(e, '#/blog')}
+          style={getLinkStyle('#/blog')}
+          onMouseEnter={(e) => { if (!isActive('#/blog')) e.target.style.color = 'var(--text-primary)'; }}
+          onMouseLeave={(e) => { if (!isActive('#/blog')) e.target.style.color = 'var(--text-secondary)'; }}
+        >
+          Blog
+        </a>
+        <a 
+          href="#/contacto" 
+          onClick={(e) => handleLinkClick(e, '#/contacto')}
+          className="glass" 
+          style={getLinkStyle('#/contacto', true)}
+        >
+          Contacto
+        </a>
       </div>
     </nav>
   );
