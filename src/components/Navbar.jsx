@@ -22,7 +22,7 @@ const Navbar = ({ currentHash = '#/', onNavigate }) => {
 
   const getLinkStyle = (hashPattern, isButton = false) => {
     const active = isActive(hashPattern);
-    
+
     if (isButton) {
       return {
         padding: '0.5rem 1.2rem',
@@ -75,11 +75,11 @@ const Navbar = ({ currentHash = '#/', onNavigate }) => {
         transition: 'var(--transition-smooth)',
         zIndex: -1
       }} />
-      <div 
+      <div
         onClick={() => handleNavigate('#/')}
         style={{ fontWeight: 700, fontSize: 'clamp(1rem, 2vw, 1.2rem)', letterSpacing: '-0.02em', color: 'var(--text-primary)', cursor: 'pointer' }}
       >
-        bbol <span style={{ color: 'var(--text-secondary)' }} >v.</span>
+        bb <span style={{ color: 'var(--text-secondary)' }} >olv</span>
       </div>
 
       <div className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
@@ -100,8 +100,8 @@ const Navbar = ({ currentHash = '#/', onNavigate }) => {
       </div>
 
       <div className={`nav-links ${isMobileMenuOpen ? 'open' : ''}`} style={{ display: 'flex', gap: '2.5rem', alignItems: 'center' }}>
-        <a 
-          href="#/" 
+        <a
+          href="#/"
           onClick={(e) => handleLinkClick(e, '#/')}
           style={getLinkStyle('#/')}
           onMouseEnter={(e) => { if (!isActive('#/')) e.target.style.color = 'var(--text-primary)'; }}
@@ -109,8 +109,8 @@ const Navbar = ({ currentHash = '#/', onNavigate }) => {
         >
           Inicio
         </a>
-        <a 
-          href="#/sobre-mi" 
+        <a
+          href="#/sobre-mi"
           onClick={(e) => handleLinkClick(e, '#/sobre-mi')}
           style={getLinkStyle('#/sobre-mi')}
           onMouseEnter={(e) => { if (!isActive('#/sobre-mi')) e.target.style.color = 'var(--text-primary)'; }}
@@ -118,8 +118,8 @@ const Navbar = ({ currentHash = '#/', onNavigate }) => {
         >
           Sobre Mí
         </a>
-        <a 
-          href="#/trayectoria" 
+        <a
+          href="#/trayectoria"
           onClick={(e) => handleLinkClick(e, '#/trayectoria')}
           style={getLinkStyle('#/trayectoria')}
           onMouseEnter={(e) => { if (!isActive('#/trayectoria')) e.target.style.color = 'var(--text-primary)'; }}
@@ -127,8 +127,8 @@ const Navbar = ({ currentHash = '#/', onNavigate }) => {
         >
           Trayectoria
         </a>
-        <a 
-          href="#/blog" 
+        <a
+          href="#/blog"
           onClick={(e) => handleLinkClick(e, '#/blog')}
           style={getLinkStyle('#/blog')}
           onMouseEnter={(e) => { if (!isActive('#/blog')) e.target.style.color = 'var(--text-primary)'; }}
@@ -136,10 +136,10 @@ const Navbar = ({ currentHash = '#/', onNavigate }) => {
         >
           Blog
         </a>
-        <a 
-          href="#/contacto" 
+        <a
+          href="#/contacto"
           onClick={(e) => handleLinkClick(e, '#/contacto')}
-          className="glass" 
+          className="glass"
           style={getLinkStyle('#/contacto', true)}
         >
           Contacto

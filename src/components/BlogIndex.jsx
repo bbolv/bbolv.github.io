@@ -122,6 +122,23 @@ const BlogIndex = ({ onNavigate }) => {
             );
           })}
         </div>
+        {/* Indicador visual de deslizamiento: Solo visible en móvil */}
+        {isMobile && (
+          <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: '4px', marginTop: '4px', paddingRight: '8px', opacity: 0.6 }}>
+            <span style={{ fontSize: '0.7rem', color: 'var(--text-secondary)' }}>Deslizar</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--text-secondary)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ animation: 'bounceX 1s infinite alternate' }}>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+            {/* Estilo local rápido para animar la flechita */}
+            <style>{`
+                @keyframes bounceX {
+                  0% { transform: translateX(-2px); }
+                  100% { transform: translateX(2px); }
+                }
+              `}</style>
+          </div>
+        )}
 
         {/* Fila 2: Búsqueda + Clasificación (Tipos) */}
         <div style={{
@@ -219,6 +236,23 @@ const BlogIndex = ({ onNavigate }) => {
             })}
           </div>
         </div>
+        {/* Indicador visual de deslizamiento: Solo visible en móvil */}
+        {isMobile && (
+          <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: '4px', marginTop: '4px', paddingRight: '8px', opacity: 0.6 }}>
+            <span style={{ fontSize: '0.7rem', color: 'var(--text-secondary)' }}>Deslizar</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--text-secondary)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ animation: 'bounceX 1s infinite alternate' }}>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+            {/* Estilo local rápido para animar la flechita */}
+            <style>{`
+                @keyframes bounceX {
+                  0% { transform: translateX(-2px); }
+                  100% { transform: translateX(2px); }
+                }
+              `}</style>
+          </div>
+        )}
       </div>
 
       {/* Grid Principal */}
