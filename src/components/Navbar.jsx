@@ -137,6 +137,15 @@ const Navbar = ({ currentHash = '#/', onNavigate }) => {
           Blog
         </a>
         <a
+          href="#/proyectos"
+          onClick={(e) => handleLinkClick(e, '#/proyectos')}
+          style={getLinkStyle('#/proyectos')}
+          onMouseEnter={(e) => { if (!isActive('#/proyectos')) e.target.style.color = 'var(--text-primary)'; }}
+          onMouseLeave={(e) => { if (!isActive('#/proyectos')) e.target.style.color = 'var(--text-secondary)'; }}
+        >
+          Proyectos
+        </a>
+        <a
           href="#/contacto"
           onClick={(e) => handleLinkClick(e, '#/contacto')}
           className="glass"

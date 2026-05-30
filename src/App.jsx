@@ -11,6 +11,7 @@ import GridBackground from './components/GridBackground';
 // Nuevos componentes de Blog
 import BlogIndex from './components/BlogIndex';
 import BlogPost from './components/BlogPost';
+import Projects from './components/Projects';
 
 function App() {
   const [currentHash, setCurrentHash] = useState(window.location.hash || '#/');
@@ -57,6 +58,8 @@ function App() {
     } else if (currentHash.startsWith('#/blog/')) {
       const postId = currentHash.replace('#/blog/', '');
       return <BlogPost postId={postId} onNavigate={handleNavigate} />;
+    } else if (currentHash === '#/proyectos' || currentHash === '#proyectos') {
+      return <Projects onNavigate={handleNavigate} />;
     } else {
       // Landing Page tradicional
       return (
